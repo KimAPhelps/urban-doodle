@@ -7,8 +7,6 @@ import string
 import subprocess
 import requests
 
-from os import path as ospath
-
 import aria2p
 import qbittorrentapi as qba
 import telegram.ext as tg
@@ -62,7 +60,7 @@ subprocess.run(["cp", "extract", "/usr/local/bin"])
 subprocess.run(["cp", "pextract", "/usr/local/bin"])
 subprocess.run(["chmod", "+x", "/usr/local/bin/extract"])
 subprocess.run(["chmod", "+x", "/usr/local/bin/pextract"])
-if not ospath.exists('.netrc'):
+if not os.path.exists('.netrc'):
     subprocess.run(["touch", ".netrc"])
 subprocess.run(["cp", ".netrc", "/root/.netrc"])
 subprocess.run(["chmod", "600", "/usr/src/app/.netrc"])
