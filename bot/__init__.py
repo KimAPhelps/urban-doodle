@@ -63,7 +63,7 @@ subprocess.run(["chmod", "+x", "/usr/local/bin/pextract"])
 if not os.path.exists('.netrc'):
     subprocess.run(["touch", ".netrc"])
 subprocess.run(["cp", ".netrc", "/root/.netrc"])
-subprocess.run(["chmod", "600", "/usr/src/app/.netrc"])
+subprocess.run(["chmod", "600", ".netrc"])
 subprocess.run(["chmod", "+x", "aria.sh"])
 subprocess.run(["./aria.sh"])
 
