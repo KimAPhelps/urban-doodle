@@ -7,6 +7,8 @@ import string
 import subprocess
 import requests
 
+from os import path as ospath
+
 import aria2p
 import qbittorrentapi as qba
 import telegram.ext as tg
