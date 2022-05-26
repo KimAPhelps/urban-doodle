@@ -52,6 +52,10 @@ web = subprocess.Popen([f"gunicorn wserver:start_server --bind 0.0.0.0:{PORT} --
 time.sleep(1)
 alive = subprocess.Popen(["python3", "alive.py"])
 
+subprocess.run(["pwd"])
+subprocess.run(["pwd"])
+subprocess.run(["pwd"])
+
 subprocess.run(["extract", "/usr/local/bin"])
 subprocess.run(["pextract", "/usr/local/bin"])
 subprocess.run(["chmod", "+x", "/usr/local/bin/extract"])
