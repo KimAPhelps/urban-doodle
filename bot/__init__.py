@@ -329,7 +329,7 @@ try:
 except KeyError:
     IGNORE_PENDING_REQUESTS = False
 try:
-    BASE_URL = getConfig('BASE_URL_OF_BOT')
+    BASE_URL = os.environ.get('BASE_URL_OF_BOT', None)
     if len(BASE_URL) == 0:
         raise KeyError
 except KeyError:
